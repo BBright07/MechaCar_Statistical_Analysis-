@@ -21,8 +21,63 @@ Files
 
 ### Summary Statistics on Suspension Coil
 #### Total Summary
-The overall variance is well below the limit set to 100 pounds, which is a positive result. The mean and the median are also quite close in value (mean: 1498.78, median: 1500) which hints at the fact that this is more or less a symmetrical distribution or a normal distribution. 
 ![alt text](https://github.com/BBright07/MechaCar_Statistical_Analysis-/blob/main/images/total_summary.jpg)
+The overall variance is well below the limit set to 100 pounds, which is a positive result. The mean and the median are also quite close in value (mean: 1498.78, median: 1500) which hints at the fact that this is more or less a symmetrical distribution or a normal distribution. 
+
 #### Lot Summary
-Although 'lot 1' and 'lot 2' meet the variance requirement by being below 100 pounds per square inch, lot 3 fails to meet the requirement at over 70 pounds above the limit.
 ![alt text](https://github.com/BBright07/MechaCar_Statistical_Analysis-/blob/main/images/lot_summary.jpg)
+Although 'lot 1' and 'lot 2' meet the variance requirement by being below 100 pounds per square inch, lot 3 fails to meet the requirement at over 70 pounds above the limit.
+
+### T-Tests on Suspension Coils
+#### T-test on each in all lots 
+Results:
+- One Sample t-test
+- data:  susCoil$PSI
+- t = -1.8931, df = 149, p-value = 0.06028
+- alternative hypothesis: true mean is not equal to 1500
+- 95 percent confidence interval:
+- - 1497.507 1500.053
+- sample estimates:
+- mean of x : 1498.78 
+
+- Interpretation: with a common significance level of 0.05 this p-value is slightly above which leads to the conclusion that the means do not have a significant difference. Additionally, the two means are statistically similar. 
+
+#### T-test for each lots
+Results:
+
+- One Sample t-test
+- data:  lot1$PSI
+- t = 0, df = 49, p-value = 1
+- alternative hypothesis: true mean is not equal to 1500
+- 95 percent confidence interval:
+- - 1499.719 1500.281
+- sample estimates:
+- mean of x 1500 
+
+Lot 1 mean is practically the same as the population mean with p at 1.
+
+- One Sample t-test
+- data:  lot2$PSI
+- t = 0.51745, df = 49, p-value = 0.6072
+- alternative hypothesis: true mean is not equal to 1500
+- 95 percent confidence interval:
+- - 1499.423 1500.977
+- sample estimates:
+- mean of x 1500.2 
+
+Lot 2 is also close in value to the pop mean at 0.6 p-value with less significance than lot 1.
+
+
+- One Sample t-test
+- data:  lot3$PSI
+- t = -2.0916, df = 49, p-value = 0.04168
+- alternative hypothesis: true mean is not equal to 1500
+- 95 percent confidence interval:
+- - 1492.431 1499.849
+- sample estimates:
+- mean of x 1496.14 
+
+Lot 3 leads to a rejection of the null hypothesis and relative significant difference in means with a p-value < 0.05
+
+### Study Design: MechaCar vs Competition
+An additional study on mpg (miles per gallon) would be really helpful to evaluate vehicle's fuel efficiency to beat competition. Using ANOVA of miles per gallon of energy efficient cars from various manufacturers and our own  we will test whether our cars' mpgs are similar to other energy efficient cars. Using a significance level of 0.05, the null hypothesis will be whether sample means differences are significant. Thus, data from competitor's mpg would be valuable in this experiment.
