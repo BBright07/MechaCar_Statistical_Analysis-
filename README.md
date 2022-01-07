@@ -21,6 +21,8 @@ Files
 
 ### Summary Statistics on Suspension Coil
 #### Total Summary
-
+The overall variance is well below the limit set to 100 pounds, which is a positive result. The mean and the median are also quite close in value (mean: 1498.78, median: 1500) which hints at the fact that this is more or less a symmetrical distribution or a normal distribution. 
+![alt text](https://github.com/BBright07/MechaCar_Statistical_Analysis-/blob/main/images/total_summary.jpg)
 #### Lot Summary
-Although lot 1 and 3 meet the variance requirement of 100 pounds per square inch, lot 3 fails to meet the requirement at over 70 pounds above the limit.
+Although 'lot 1' and 'lot 2' meet the variance requirement by being below 100 pounds per square inch, lot 3 fails to meet the requirement at over 70 pounds above the limit.
+![alt text](https://github.com/BBright07/MechaCar_Statistical_Analysis-/blob/main/images/lot_summary.jpg)
